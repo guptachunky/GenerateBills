@@ -1,0 +1,130 @@
+[
+  {
+    "text": "CHANAKYAPURI SERVICE STATION",
+    "locationX": 22,
+    "locationY": 310,
+    "fontSize": 9,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "ROAD NO 26, Outer Ring R",
+    "locationX": 30,
+    "locationY": 298,
+    "fontSize": 9,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "Delhi",
+    "locationX": 75,
+    "locationY": 286,
+    "fontSize": 9,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "enricher": "RandomNumber",
+    "locationX": 125,
+    "locationY": 235,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "DateToday",
+    "locationX": 125,
+    "locationY": 221,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "enricher": "TimeNow",
+    "locationX": 125,
+    "locationY": 207,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "",
+    "locationX": 125,
+    "locationY": 193,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "CASH",
+    "locationX": 125,
+    "locationY": 179,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "11",
+    "locationX": 125,
+    "locationY": 165,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "77",
+    "locationX": 125,
+    "locationY": 151,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "Diesel",
+    "locationX": 125,
+    "locationY": 137,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "DL11CA4750",
+    "locationX": 125,
+    "locationY": 123,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "9873745158",
+    "locationX": 125,
+    "locationY": 109,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "Rs. 87.62",
+    "locationX": 125,
+    "locationY": 95,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "51.36",
+    "locationX": 125,
+    "locationY": 81,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  },
+  {
+    "text": "Rs. 4500",
+    "locationX": 125,
+    "locationY": 67,
+    "fontSize": 11,
+    "color": "#222222",
+    "font": "VictorMono-Bold.ttf"
+  }
+]

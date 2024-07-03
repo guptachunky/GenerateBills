@@ -2,48 +2,39 @@ package com.amithgc.billgenerator;
 
 import com.amithgc.billgenerator.pojo.PDFFIllData;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
+import java.util.Random;
 
 public class App {
     public static void main(String[] args) {
-        if (args.length != 6) {
-            System.out.println("Usage: Please provide the options as follows:");
-            System.out.println("-t <template_name> -j <json_input_file> -o <output_pdf_file>");
-            System.out.println("Example: java -jar billGenerator.jar -t ./data/base-pdf/fuel-bill-sample-1.pdf -j ./data/json/fuel-bill-sample-1.json -o ./output/out.pdf");
-            System.exit(0);
-        }
+        //just change time here
+        // in case rate is updated change it in Json File
+        Calendar cal = Calendar.getInstance();
+        cal.set(2024, Calendar.APRIL, 6);
 
-        String templateName = null;
-        String jsonInputFile = null;
-        String outputPdfFile = null;
-
-        // Parse command-line arguments
-        for (int i = 0; i < args.length; i++) {
-            if (args[i].equals("-t")) {
-                templateName = args[i + 1];
-            } else if (args[i].equals("-j")) {
-                jsonInputFile = args[i + 1];
-            } else if (args[i].equals("-o")) {
-                outputPdfFile = args[i + 1];
-            }
-        }
-
-        if (templateName == null || jsonInputFile == null || outputPdfFile == null) {
-            System.out.println("Usage: Please provide all the required options.");
-            System.exit(0);
-        }
-
+        String templateName = "data/base-pdf/chunky.pdf";
+        String jsonInputFile = "./data/json/Chunky.json";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         JsonReader reader = new JsonReader();
         List<PDFFIllData> data = reader.read(jsonInputFile);
-
         if (data != null) {
+            Random random = new Random();
+            String[] times = {"am", "pm"};
+
             PDFGenerator generator = new PDFGenerator();
-            generator.generate(data, templateName, outputPdfFile);
+            for (int i = 0; i < 10; i++) {
+                String myDate = dateFormat.format(cal.getTime());
+                String monthName = cal.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                String outputPdfFile = "./data/output/chunky/" + cal.get(Calendar.DAY_OF_MONTH) + "-" + monthName + ".pdf";
+                data.get(4).setText(myDate);
+                data.get(5).setText(random.nextInt(12) + ":" + random.nextInt(60)
+                        + " " + times[random.nextInt(2)]);
+                generator.generate(data, templateName, outputPdfFile);
+                cal.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH) + 7);
+            }
         }
     }
 }
-
-
-
-
-
